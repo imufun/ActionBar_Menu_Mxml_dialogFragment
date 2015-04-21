@@ -16,20 +16,20 @@ public class MyDialogFragment extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Custome Title")
-                .setMessage("Hello I am Dialog")
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getActivity(), "Clicked ok", Toast.LENGTH_LONG).show();
-                    }
-                })
-                .setNegativeButton("Cancle", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(getActivity(), "Clicked cancle", Toast.LENGTH_LONG).show();
-                    }
-                });
+        builder.setTitle("Custome Title");
+        builder.setMessage("Hello I am Dialog");
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(getActivity(), "Clicked ok", Toast.LENGTH_LONG).show();
+            }
+        });
+        builder.setNegativeButton("Cancle", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(getActivity(), "Clicked cancle", Toast.LENGTH_LONG).show();
+            }
+        });
 
 
         return super.onCreateDialog(savedInstanceState);
