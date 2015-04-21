@@ -15,7 +15,7 @@
             android:id="@+id/exit_the_app"
             android:orderInCategory="101"
             android:title="@string/options_exit_text"
-           
+            app:showAsAction="ifRoom|withText"
             android:icon="@drawable/ic_action_edit"/>
 
     </group>

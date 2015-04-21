@@ -1,5 +1,6 @@
 package com.imufun.imran.actionbar_menu_mxml_dialogfragment;
 
+import android.app.DialogFragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -31,8 +32,13 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            //call custome  class dialog activity
+            DialogFragment dialogFragment = new MyDialogFragment();
+            dialogFragment.show(getFragmentManager(), "builder");
+
             return true;
-        }else if (id==R.id.exit_the_app){
+        } else if (id == R.id.exit_the_app) {
             finish();
             return true;
         }
